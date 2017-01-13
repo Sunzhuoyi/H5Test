@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>h5 element</title>
+</head>
+<body>
+<input type="number" name="demoNumber" min="1" max="100" step="2"/>
+<input type="email" name="email" placeholder="请输入注册邮箱"/>
+<input type="url" placeholder="请输入网址" name="url"/>
+<input type="tel" placeholder="输入电话" name="phone"/>
+<input type="range" min="0" max="50" step="5" name="rangedemo" value="0"/>
+<form oninput="output.value=parseInt(range.value)">
+    <input type="range" min="0" max="100" step="5" name="range" value="0"/>
+    <output name="output">0</output>
+</form>
+<input type="date" name="datedemo">
+<!--相关的日期属性还包括month,time,week,datetime-locak,datetime-->
+<input type="color" name="colordemo"/>
+<!--自动完成功能-->
+<input type="text" autocomplete="on" name="demoAutoComplete" list="autoNames"/>
+<datalist id="autoNames">
+    <option value="实验楼"></option>
+    <option value="HTML5"></option>
+    <option value="input标签"></option>
+</datalist>
+<!--校验属性-->
+<input type="text" autofocus="autofocus" required pattern="\d+"/>
+<!--
+增加form属性，任何一个标签都可以指定它所属于一个表单，而不是必须在中进行包裹了
+-->
+<input type="text" form="demoform" name="demo"/>
+<!--
+novalidate 属性规定在提交表单时不应该验证form或input域
+-->
+
+</body>
+</html>
